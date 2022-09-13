@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import { getTypes } from '../../Services/ApiService'
 import './pokedex.css'
 
@@ -14,7 +15,8 @@ const PokeTypes = () => {
   
   return (
     <div className='select-poke'>
-      {types.map(type => <p className='poke-name'>{type.name}</p >)}
+      {types.map((type, index) => <p key={index} className='poke-name'>{type.name}</p >)}
+      <Outlet/>
     </div>
   )
 }

@@ -4,24 +4,24 @@ import { routes } from '../../configRoute'
 
 const Navbar = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
-  // const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('')
 
-  // useEffect(() => {
-  //   navigate(`pokemon/${search}`)
-  // }, [navigate, search])
-
-  // const searchPoke = (event) => {
-  //   setSearch(event.target.value)
-  // }
+  const searchPoke = (event) => {
+    event.preventDefault()
+    navigate(`pokemon/${search}`)
+  }
 
   return (
     <nav className='header-fixed'>
         <Link to={routes.home}><h3>Home</h3></Link>
         <Link to={routes.pokeList}><h3>Pokelist</h3></Link>
         <Link to={routes.pokeTypes}><h3>Tipos</h3></Link>
-        {/* <input type='text' value={search} onChange={searchPoke}/> */}
+        <form onSubmit={searchPoke}>
+          <input type='text' value={search} onChange={(event) => setSearch(event.target.value)}/>
+          <button >🔍</button>
+        </form>
     </nav>
   )
 }
