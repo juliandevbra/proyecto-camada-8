@@ -14,15 +14,14 @@ const Pokemon = ({loading, setLoading}) => {
           setPoke(res.data)
           setTimeout(() => {
             setLoading(false)
-          }, 2000)
-          
+          }, 1000)
         })
     }, [url, setLoading])
 
   return (
     <div className='poke-info'>
       { loading ?
-        <img src={pokeLoader} alt=''/>
+        <img src={pokeLoader} alt='' style={{margin: 'auto'}}/>
         :
         <div className='poke-stats'>
           <h2>{params.pokeName}</h2>

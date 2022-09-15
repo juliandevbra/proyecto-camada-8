@@ -69,11 +69,10 @@
     position: fixed;
     top: 22%;
     right: 0;
-    background-color: #fff1f1;
+    background-color: #ffffff;
     flex-direction: column;
     padding: 20px;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     border: 10px solid black;
 }
