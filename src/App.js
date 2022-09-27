@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState} from 'react';
+import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Components/Clase 17 y 18/Home';
 import PokeList from './Components/Clase 17 y 18/PokeList';
@@ -10,7 +11,7 @@ import { routes } from './configRoute'
 function App() {
 
   const [loading, setLoading] = useState(true)
-
+ 
    return (
     <div className="App">
       <Routes>

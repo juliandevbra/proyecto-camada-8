@@ -23,16 +23,16 @@ const PokeList = ({setLoading}) => {
         try {
           const response = await axios.get(url)
           setList(response.data.results)
-          }
-          catch (err) {
+        }
+        catch (err) {
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
               text: err.toString(),
               footer: '<a href="">Why do I have this issue?</a>'
             })
-          }
         }
+      }
       fetchData()
   },[])
 
